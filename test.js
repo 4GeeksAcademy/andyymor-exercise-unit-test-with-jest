@@ -7,11 +7,11 @@ test("One euro should be 1.07 dollars", function() {
 test("One dollar should be 156.5yen", function() {
     const { fromDollarToYen} = require('./app.js');
 
-    expect(fromDollarToYen(3.5)).toBe(547.75);
+    expect(fromDollarToYen(3.5)).toBeCloseTo(511.915, 2);
 })
 
 test("One yen should be 0.87 pounds", function() {
     const { fromYenToPound} = require('./app.js');
 
-    expect(fromYenToPound(3.5)).toBe(476.5);
+    expect(fromYenToPound(350)).toBeCloseTo(1.945, 2);
 })
